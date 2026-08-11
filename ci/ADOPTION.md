@@ -12,8 +12,10 @@ contract from the baseline directory's contents, so one script covers both.
 
 ## Setup in a consuming repo
 
-1. Copy `server/baseline-dlls/` from mpex-api-compat into your repo. The DLLs are
-   frozen at 4.1.2 forever — copies cannot drift.
+1. Copy `server/baseline-dlls/` and/or `client/baseline-dlls/` from mpex-api-compat
+   into your repo (e.g. as `./baseline-dlls` and `./client-baseline-dlls`) —
+   whichever contracts you gate. The DLLs are frozen at 4.1.2 forever — copies
+   cannot drift.
 2. Copy `ci/check-api-compat.sh`.
 3. Add the ApiCompat tool to your tool manifest:
    `dotnet new tool-manifest` (if you have none), then
@@ -52,6 +54,9 @@ Once a refs directory is passed, ApiCompat prints a loud
 cannot find. Those lines are warnings — they do **not** fail the run — so treat
 any of them as an incomplete refs directory and fix it before trusting a pass.
 A correctly populated `client/refs/` produces none.
+
+Client shims must also be stamped `AssemblyVersion 4.1.2.0` — the client
+behavioral suite asserts it as the contract's freeze marker.
 
 ## Rules
 
