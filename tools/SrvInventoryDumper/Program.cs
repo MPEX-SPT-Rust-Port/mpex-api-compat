@@ -287,7 +287,7 @@ if (opts.TryGetValue("--readme", out var readmePath))
     sb.AppendLine();
     sb.AppendLine("## Regenerating");
     sb.AppendLine();
-    sb.AppendLine("`tools/generate-baseline.sh` rebuilds `README.md`, `server/inventory/`, `server/api-surface/` and `server/baseline-dlls/`.");
+    sb.AppendLine("`tools/generate-baseline.sh` rebuilds `README.md`, `server/baseline-dlls/`, `server/api-surface/`, `server/inventory/`, `client/api-surface/` and `client/inventory/`.");
     sb.AppendLine("It needs a source worktree of the 4.1.2 tag to scan the route table:");
     sb.AppendLine();
     sb.AppendLine("```sh");

@@ -40,7 +40,7 @@ Plugins: 4 (see [client/inventory/plugins.md](client/inventory/plugins.md)). Pat
 
 ## Regenerating
 
-`tools/generate-baseline.sh` rebuilds `README.md`, `server/inventory/`, `server/api-surface/` and `server/baseline-dlls/`.
+`tools/generate-baseline.sh` rebuilds `README.md`, `server/baseline-dlls/`, `server/api-surface/`, `server/inventory/`, `client/api-surface/` and `client/inventory/`.
 It needs a source worktree of the 4.1.2 tag to scan the route table:
 
 ```sh
