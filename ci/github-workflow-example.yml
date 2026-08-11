@@ -17,3 +17,4 @@ jobs:
       - run: dotnet tool restore
       # ... build your shim assemblies here ...
       - run: ./ci/check-api-compat.sh <path-to-built-shims> ./baseline-dlls
+      # client contract: ./ci/check-api-compat.sh <path-to-client-shims> ./client-baseline-dlls <refs-dir> (refs from a live game install — see ADOPTION.md)

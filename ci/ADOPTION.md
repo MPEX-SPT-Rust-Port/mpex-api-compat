@@ -1,9 +1,14 @@
 # Adopting the mod-API compatibility gate
 
 The contract: compiled SPT 4.1.2 C# mods must keep loading. Any change to the
-public surface of the six contract assemblies (SPTarkov.Common, SPTarkov.DI,
-SPTarkov.Reflection, SPTarkov.Server.Assets, SPTarkov.Server.Core,
-SPTarkov.Server.Web) can break that. This gate makes such breaks fail PRs.
+public surface of the six server contract assemblies (SPTarkov.Common,
+SPTarkov.DI, SPTarkov.Reflection, SPTarkov.Server.Assets, SPTarkov.Server.Core,
+SPTarkov.Server.Web) or the seven client contract assemblies (spt-common,
+spt-core, spt-custom, spt-debugging, spt-prepatch, spt-reflection,
+spt-singleplayer) can break that. This gate makes such breaks fail PRs.
+
+`check-api-compat.sh <candidate-dir> <baseline-dir> [refs-dir]` picks the
+contract from the baseline directory's contents, so one script covers both.
 
 ## Setup in a consuming repo
 
@@ -22,6 +27,29 @@ closure** (or pass `--right-assembly-references <dir>`). ApiCompat does not warn
 when it cannot resolve a candidate's references — an assembly compared in an
 otherwise empty directory yields a clean pass with zero diagnostics, which looks
 exactly like success.
+
+## Client contract
+
+The client baseline works the same way with one extra requirement: the seven
+client assemblies (spt-common, spt-core, spt-custom, spt-debugging,
+spt-prepatch, spt-reflection, spt-singleplayer) reference game-derived
+assemblies that cannot be vendored. Provide them as a third argument:
+
+    ./ci/check-api-compat.sh <your-client-shim-dir> ./client-baseline-dlls <refs-dir>
+
+Populate <refs-dir> from a live SPT 4.1.2 install exactly as described in
+mpex-api-compat's `client/refs/README.md`. The script selects the client
+assembly list automatically (it looks for spt-common.dll in the baseline dir)
+and refuses to run the client contract without refs — with no refs argument at
+all ApiCompat resolves nothing, says nothing about it, and silently skips
+whatever it could not resolve, so a clean pass with zero diagnostics carries no
+guarantee about actual compatibility.
+
+Once a refs directory is passed, ApiCompat prints a loud
+`Could not resolve reference '<name>.dll' ...` line for every reference it still
+cannot find. Those lines are warnings — they do **not** fail the run — so treat
+any of them as an incomplete refs directory and fix it before trusting a pass.
+A correctly populated `client/refs/` produces none.
 
 ## Rules
 
