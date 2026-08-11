@@ -1,0 +1,992 @@
+[
+  {
+    "Url": "/?last_id",
+    "Router": "NotifierDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/NotifierDynamicRouter.cs"
+  },
+  {
+    "Url": "/client/account/customization",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/achievement/list",
+    "Router": "AchievementStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/AchievementStaticRouter.cs"
+  },
+  {
+    "Url": "/client/achievement/statistic",
+    "Router": "AchievementStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/AchievementStaticRouter.cs"
+  },
+  {
+    "Url": "/client/airdrop/loot",
+    "Router": "LocationStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LocationStaticRouter.cs"
+  },
+  {
+    "Url": "/client/analytics/event-disconnect",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/builds/delete",
+    "Router": "BuildStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/BuildStaticRouter.cs"
+  },
+  {
+    "Url": "/client/builds/equipment/save",
+    "Router": "BuildStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/BuildStaticRouter.cs"
+  },
+  {
+    "Url": "/client/builds/list",
+    "Router": "BuildStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/BuildStaticRouter.cs"
+  },
+  {
+    "Url": "/client/builds/magazine/save",
+    "Router": "BuildStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/BuildStaticRouter.cs"
+  },
+  {
+    "Url": "/client/builds/weapon/save",
+    "Router": "BuildStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/BuildStaticRouter.cs"
+  },
+  {
+    "Url": "/client/chatServer/list",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/checkVersion",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/customization",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/customization/storage",
+    "Router": "CustomizationStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/CustomizationStaticRouter.cs"
+  },
+  {
+    "Url": "/client/dialogue",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/delete",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/ignore/remove",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/ignore/set",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/list",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/request/accept",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/request/accept-all",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/request/cancel",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/request/decline",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/request/list/inbox",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/request/list/outbox",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/friend/request/send",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/bot/generate",
+    "Router": "BotStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/BotStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/config",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/keepalive",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/logout",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/mode",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/create",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/items/moving",
+    "Router": "ItemEventStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ItemEventStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/list",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/nickname/change",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/nickname/reserved",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/nickname/validate",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/savage/regenerate",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/search",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/select",
+    "Router": "NotifierStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/NotifierStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/profile/voice/change",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/start",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/game/version/validate",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/getMetricsConfig",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/globals",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/handbook/templates",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/hideout/areas",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/hideout/customization/offer/list",
+    "Router": "CustomizationStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/CustomizationStaticRouter.cs"
+  },
+  {
+    "Url": "/client/hideout/production/recipes",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/hideout/qte/list",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/hideout/settings",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/insurance/items/list/cost",
+    "Router": "InsuranceStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/InsuranceStaticRouter.cs"
+  },
+  {
+    "Url": "/client/items",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/items/prices",
+    "Router": "RagfairStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/RagfairStaticRouter.cs"
+  },
+  {
+    "Url": "/client/items/prices/",
+    "Router": "DataDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/DataDynamicRouter.cs"
+  },
+  {
+    "Url": "/client/languages",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/localGame/weather",
+    "Router": "WeatherStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/WeatherStaticRouter.cs"
+  },
+  {
+    "Url": "/client/locale/",
+    "Router": "DataDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/DataDynamicRouter.cs"
+  },
+  {
+    "Url": "/client/location/getLocalloot",
+    "Router": "InraidDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/InraidDynamicRouter.cs"
+  },
+  {
+    "Url": "/client/locations",
+    "Router": "LocationStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LocationStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/clear",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/getAllAttachments",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/group/create",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/group/owner/change",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/group/users/add",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/group/users/remove",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/info",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/list",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/pin",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/read",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/remove",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/unpin",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/dialog/view",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/mail/msg/send",
+    "Router": "DialogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DialogStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/available",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/exit",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/current",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/current",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/delete",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/exit_from_menu",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/invite/accept",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/invite/cancel",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/invite/cancel-all",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/invite/decline",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/invite/send",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/leave",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/looking/start",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/looking/stop",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/player/remove",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/raid/not-ready",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/raid/ready",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/start_game",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/status",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/group/transfer",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/join",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/local/end",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/local/start",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/match/updatePing",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/menu/locale/",
+    "Router": "DataDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/DataDynamicRouter.cs"
+  },
+  {
+    "Url": "/client/notifier/channel/create",
+    "Router": "NotifierStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/NotifierStaticRouter.cs"
+  },
+  {
+    "Url": "/client/prestige/list",
+    "Router": "PrestigeStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/PrestigeStaticRouter.cs"
+  },
+  {
+    "Url": "/client/prestige/obtain",
+    "Router": "PrestigeStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/PrestigeStaticRouter.cs"
+  },
+  {
+    "Url": "/client/profile/settings",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/profile/status",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/profile/view",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/client/putHWMetrics",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/putMetrics",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/quest/list",
+    "Router": "QuestStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/QuestStaticRouter.cs"
+  },
+  {
+    "Url": "/client/ragfair/find",
+    "Router": "RagfairStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/RagfairStaticRouter.cs"
+  },
+  {
+    "Url": "/client/ragfair/itemMarketPrice",
+    "Router": "RagfairStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/RagfairStaticRouter.cs"
+  },
+  {
+    "Url": "/client/ragfair/offer/findbyid",
+    "Router": "RagfairStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/RagfairStaticRouter.cs"
+  },
+  {
+    "Url": "/client/ragfair/offerfees",
+    "Router": "RagfairStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/RagfairStaticRouter.cs"
+  },
+  {
+    "Url": "/client/ragfair/search",
+    "Router": "RagfairStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/RagfairStaticRouter.cs"
+  },
+  {
+    "Url": "/client/raid/configuration",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/raid/configuration-by-profile",
+    "Router": "MatchStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/MatchStaticRouter.cs"
+  },
+  {
+    "Url": "/client/report/send",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/reports/lobby/send",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/reports/ragfair/send",
+    "Router": "RagfairStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/RagfairStaticRouter.cs"
+  },
+  {
+    "Url": "/client/server/list",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/settings",
+    "Router": "DataStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/DataStaticRouter.cs"
+  },
+  {
+    "Url": "/client/survey",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/survey/opinion",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/survey/view",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/client/trading/api/getTrader/",
+    "Router": "TraderDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/TraderDynamicRouter.cs"
+  },
+  {
+    "Url": "/client/trading/api/getTraderAssort/",
+    "Router": "TraderDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/TraderDynamicRouter.cs"
+  },
+  {
+    "Url": "/client/trading/api/traderSettings",
+    "Router": "TraderStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/TraderStaticRouter.cs"
+  },
+  {
+    "Url": "/client/trading/customization/",
+    "Router": "CustomizationDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/CustomizationDynamicRouter.cs"
+  },
+  {
+    "Url": "/client/trading/customization/storage",
+    "Router": "CustomizationStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/CustomizationStaticRouter.cs"
+  },
+  {
+    "Url": "/client/weather",
+    "Router": "WeatherStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/WeatherStaticRouter.cs"
+  },
+  {
+    "Url": "/files/bundle",
+    "Router": "BundleDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/BundleDynamicRouter.cs"
+  },
+  {
+    "Url": "/launcher/profile/info",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/profiles",
+    "Router": "ProfileStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ProfileStaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/login",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/mod-pages",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/mods",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/ping",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/profile",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/profiles",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/register",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/remove",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/types",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/version",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/launcher/v2/wipe",
+    "Router": "LauncherV2StaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/LauncherV2StaticRouter.cs"
+  },
+  {
+    "Url": "/notifierServer",
+    "Router": "NotifierDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/NotifierDynamicRouter.cs"
+  },
+  {
+    "Url": "/push/notifier/get/",
+    "Router": "NotifierDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/NotifierDynamicRouter.cs"
+  },
+  {
+    "Url": "/push/notifier/get/",
+    "Router": "NotifierDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/NotifierDynamicRouter.cs"
+  },
+  {
+    "Url": "/raid/profile/scavsave",
+    "Router": "InraidStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/InraidStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/bosstypes",
+    "Router": "InraidStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/InraidStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/bundles",
+    "Router": "BundleStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/BundleStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/clientmods",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/customEnumEntries",
+    "Router": "ModLoaderRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ModLoaderRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/enableBSGlogging",
+    "Router": "ClientLogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ClientLogStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/log",
+    "Router": "ClientLogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ClientLogStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/moddedTraders",
+    "Router": "ModLoaderRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ModLoaderRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/release",
+    "Router": "ClientLogStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/ClientLogStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/scav/traitorscavhostile",
+    "Router": "InraidStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/InraidStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/settings/bot/difficulties",
+    "Router": "BotDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/BotDynamicRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/settings/bot/difficulty/",
+    "Router": "BotDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/BotDynamicRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/settings/bot/getBotBehaviours/",
+    "Router": "BotDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/BotDynamicRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/settings/bot/limit/",
+    "Router": "BotDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/BotDynamicRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/settings/bot/maxCap",
+    "Router": "BotDynamicRouter",
+    "Kind": "DynamicRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Dynamic/BotDynamicRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/settings/getRaidTime",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/settings/raid/menu",
+    "Router": "InraidStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/InraidStaticRouter.cs"
+  },
+  {
+    "Url": "/singleplayer/settings/version",
+    "Router": "GameStaticRouter",
+    "Kind": "StaticRouter",
+    "File": "Libraries/SPTarkov.Server.Core/Routers/Static/GameStaticRouter.cs"
+  }
+]
