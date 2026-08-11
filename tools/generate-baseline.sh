@@ -4,11 +4,11 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
-echo "== [1/2] Restoring 4.1.2 package closure"
+echo "== [1/3] Restoring 4.1.2 package closure"
 dotnet publish "$ROOT/tools/BaselineClosure/BaselineClosure.csproj" -c Release \
     -o "$ROOT/tools/BaselineClosure/publish"
 
-echo "== [2/2] Copying assemblies into baseline-dlls/"
+echo "== [2/3] Copying assemblies into baseline-dlls/"
 mkdir -p "$ROOT/baseline-dlls"
 rm -f "$ROOT/baseline-dlls"/*.dll
 # Top-level DLLs only: skips SPT_Data content dirs and runtimes/ natives.
@@ -18,4 +18,21 @@ for dll in "$ROOT/tools/BaselineClosure/publish"/*.dll; do
     cp "$dll" "$ROOT/baseline-dlls/$base"
 done
 
-echo "OK: $(ls "$ROOT/baseline-dlls" | wc -l) assemblies in baseline-dlls/"
+echo "== [3/3] Generating API surface listings"
+dotnet tool restore --tool-manifest "$ROOT/.config/dotnet-tools.json" >/dev/null
+
+# GenAPI needs reference assemblies to resolve framework types.
+NETCORE_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.*/ref/net10.0 | sort | tail -1)
+ASPNET_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.AspNetCore.App.Ref/10.0.*/ref/net10.0 | sort | tail -1)
+
+mkdir -p "$ROOT/api-surface"
+rm -f "$ROOT/api-surface"/*.cs
+for a in SPTarkov.Common SPTarkov.DI SPTarkov.Reflection SPTarkov.Server.Assets SPTarkov.Server.Core SPTarkov.Server.Web; do
+    echo "   genapi $a"
+    dotnet genapi \
+        --assembly "$ROOT/baseline-dlls/$a.dll" \
+        --assembly-reference "$ROOT/baseline-dlls,$NETCORE_REF,$ASPNET_REF" \
+        --output-path "$ROOT/api-surface"
+done
+
+echo "OK: baseline regenerated"
