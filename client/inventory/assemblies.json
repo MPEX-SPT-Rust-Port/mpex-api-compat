@@ -1,0 +1,123 @@
+[
+  {
+    "Name": "spt-common",
+    "Version": "4.1.2.0",
+    "PublicTypes": 15,
+    "References": [
+      "BepInEx",
+      "Newtonsoft.Json",
+      "UnityEngine.CoreModule",
+      "UnityEngine.UnityWebRequestModule",
+      "bsg.componentace.compression.libs.zlib",
+      "netstandard"
+    ]
+  },
+  {
+    "Name": "spt-core",
+    "Version": "4.1.2.0",
+    "PublicTypes": 8,
+    "References": [
+      "0Harmony",
+      "Assembly-CSharp",
+      "BepInEx",
+      "FilesChecker",
+      "UnityEngine.UnityWebRequestModule",
+      "UnityEngine.UnityWebRequestTextureModule",
+      "netstandard",
+      "spt-common",
+      "spt-reflection"
+    ]
+  },
+  {
+    "Name": "spt-custom",
+    "Version": "4.1.2.0",
+    "PublicTypes": 72,
+    "References": [
+      "0Harmony",
+      "Assembly-CSharp",
+      "BepInEx",
+      "Comfort",
+      "Newtonsoft.Json",
+      "Unity.ScriptableBuildPipeline",
+      "Unity.TextMeshPro",
+      "UnityEngine.AssetBundleModule",
+      "UnityEngine.AudioModule",
+      "UnityEngine.CoreModule",
+      "UnityEngine.IMGUIModule",
+      "UnityEngine.ImageConversionModule",
+      "UnityEngine.TextRenderingModule",
+      "UnityEngine.UI",
+      "netstandard",
+      "spt-common",
+      "spt-reflection"
+    ]
+  },
+  {
+    "Name": "spt-debugging",
+    "Version": "4.1.2.0",
+    "PublicTypes": 19,
+    "References": [
+      "0Harmony",
+      "Assembly-CSharp",
+      "BepInEx",
+      "Comfort",
+      "CommonExtensions",
+      "NLog",
+      "Newtonsoft.Json",
+      "Unity.TextMeshPro",
+      "UnityEngine.CoreModule",
+      "UnityEngine.IMGUIModule",
+      "UnityEngine.InputLegacyModule",
+      "UnityEngine.PhysicsModule",
+      "UnityEngine.TextRenderingModule",
+      "UnityEngine.UI",
+      "bsg.console.core",
+      "netstandard",
+      "spt-common",
+      "spt-custom",
+      "spt-reflection"
+    ]
+  },
+  {
+    "Name": "spt-prepatch",
+    "Version": "4.1.2.0",
+    "PublicTypes": 4,
+    "References": [
+      "BepInEx",
+      "Mono.Cecil",
+      "Newtonsoft.Json",
+      "netstandard"
+    ]
+  },
+  {
+    "Name": "spt-reflection",
+    "Version": "4.1.2.0",
+    "PublicTypes": 17,
+    "References": [
+      "0Harmony",
+      "Assembly-CSharp",
+      "BepInEx",
+      "Comfort",
+      "FilesChecker",
+      "UnityEngine.CoreModule",
+      "netstandard"
+    ]
+  },
+  {
+    "Name": "spt-singleplayer",
+    "Version": "4.1.2.0",
+    "PublicTypes": 46,
+    "References": [
+      "0Harmony",
+      "Assembly-CSharp",
+      "BepInEx",
+      "Comfort",
+      "Newtonsoft.Json",
+      "UnityEngine.CoreModule",
+      "UnityEngine.UI",
+      "netstandard",
+      "spt-common",
+      "spt-reflection"
+    ]
+  }
+]

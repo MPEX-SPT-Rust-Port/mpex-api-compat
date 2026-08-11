@@ -1,0 +1,34 @@
+[
+  {
+    "Assembly": "spt-core",
+    "Type": "SPT.Core.SPTCorePlugin",
+    "Guid": "com.SPT.core",
+    "Name": "SPT.Core",
+    "Version": "4.1.2",
+    "Dependencies": []
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.SPTCustomPlugin",
+    "Guid": "com.SPT.custom",
+    "Name": "SPT.Custom",
+    "Version": "4.1.2",
+    "Dependencies": []
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.SPTDebuggingPlugin",
+    "Guid": "com.SPT.debugging",
+    "Name": "SPT.Debugging",
+    "Version": "4.1.2",
+    "Dependencies": []
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.SPTSingleplayerPlugin",
+    "Guid": "com.SPT.singleplayer",
+    "Name": "SPT.Singleplayer",
+    "Version": "4.1.2",
+    "Dependencies": []
+  }
+]

@@ -1,0 +1,406 @@
+[
+  {
+    "Assembly": "spt-core",
+    "Type": "SPT.Core.Patches.BattlEyePatch"
+  },
+  {
+    "Assembly": "spt-core",
+    "Type": "SPT.Core.Patches.ConsistencyMultiPatch"
+  },
+  {
+    "Assembly": "spt-core",
+    "Type": "SPT.Core.Patches.ConsistencySinglePatch"
+  },
+  {
+    "Assembly": "spt-core",
+    "Type": "SPT.Core.Patches.SslCertificatePatch"
+  },
+  {
+    "Assembly": "spt-core",
+    "Type": "SPT.Core.Patches.UnityWebRequestPatch"
+  },
+  {
+    "Assembly": "spt-core",
+    "Type": "SPT.Core.Patches.WebSocketSslValidationPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.AddOfferFilterHangPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.AddTraitorScavsPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.AllowAirdropsInPvEPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.BetaLogoPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.BetaLogoPatch2"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.BetaLogoPatch3"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.BotDifficultyPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.BotsControllerInitPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.BotsEventsControllerActivatePatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.CopyPmcQuestsAndWishlistToPlayerScavPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.CoreDifficultyPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.CustomAiPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.DisableGameModeAdjustButtonPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.DisableNonHalloweenExitsDuringEventPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.EasyAssetsPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.EasyBundlePatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.EnableInfectionUIPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.EnablePrestigeTabPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.FixAirdropCrashPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.FixAirdropFlareDisposePatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.FixBossesHavingNoFollowersOnMediumAiAmount"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.FixKeylessDoorsPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.FixPmcSpawnParamsNullErrorPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.FixPrecipitationAmbientBlenderNullRefPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.FixScavWarNullErrorWithMarkOfUnknownPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.GameStartRequestPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.KhorovodDisposeFix"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.LocaleManagerRaceConditionFixPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.MatchStartServerLocationPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.MemoryCollectionPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.MergeScavPmcQuestsOnInventoryLoadPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.PreventClientModsPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.RedirectClientImageRequestsPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsDeleteAll"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsDeleteKey"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsGetFloat"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsGetInt"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsGetString"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsHasKey"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsSave"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsSetFloat"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsSetInt"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveRegistryToSptFolderPatches\u002BPatchPlayerPrefsSetString"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SaveSettingsToSptFolderPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SendFleaListingTaxAmountToServerPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SetPreRaidSettingsScreenDefaultsPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SpawnPointAIPlayerBotLimitPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.SpawnPointNearestPlayerAIPatch"
+  },
+  {
+    "Assembly": "spt-custom",
+    "Type": "SPT.Custom.Patches.VersionLabelPatch"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.CoordinatesPatch"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.DataHandlerDebugPatch"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.DumpyLibPatch"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.EnableDebugCommandsPatch"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.EndRaidDebug"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.ExfilDumper"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.LoggerClassLogPatch"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.PMCBotSpawnLocationPatch"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.ReloadClientPatch"
+  },
+  {
+    "Assembly": "spt-debugging",
+    "Type": "SPT.Debugging.Patches.StaticLootDumper"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.ArmorDamageCounterPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.DisableBuffLoggingPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.DisableMatchmakerPlayerPreviewButtonsPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.DisableUseBSGServersCheckbox"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.DisableWelcomeToPVEModeMessagePatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.ForceRaidModeToLocalPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.PluginErrorNotifierPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.ReadyButtonPatches\u002BDisableMatchmakerInsuranceReadyPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.ReadyButtonPatches\u002BDisableMatchmakerOfflineRaidReadyPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.ReadyButtonPatches\u002BDisableReadyLocationReadyPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.RemoveClothingItemExternalObtainLabelPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.RemoveStashUpgradeLabelPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.MainMenu.RemoveStashUpgradeLabelPatch2"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.DisableHideoutCounterResetPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.EmptyInfilFixPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.FixDisableBossSpawningOptionPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.FixKeyAlreadyExistsErrorOnAchievementPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.OverrideMaxAiAliveInRaidValuePatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.PmcBotSidePatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.QuestAchievementRewardInRaidPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.RemoveTransitionRaidModeSetPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.RemoveUsedBotProfilePatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.RaidFix.TinnitusFixPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.DisablePMCExtractsForScavsPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.GetProfileAtEndOfRaidPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.LoadOfflineRaidScreenPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavExfilPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavIsPlayerEnemyPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavLateStartPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavPrefabLoadPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavPrestigeFixPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavProfileLoadPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavRepAdjustmentPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavSellAllPriceStorePatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.ScavSellAllRequestPatch"
+  },
+  {
+    "Assembly": "spt-singleplayer",
+    "Type": "SPT.SinglePlayer.Patches.ScavMode.SendPlayerScavProfileToServerAfterRaidPatch"
+  }
+]
