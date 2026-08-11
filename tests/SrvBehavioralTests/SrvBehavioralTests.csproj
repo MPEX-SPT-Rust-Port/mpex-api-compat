@@ -8,7 +8,7 @@
     <!-- MPEX: directory of assemblies under test. Default = frozen 4.1.2 baseline.
          Point at a shim build output to verify a Rust port:
          dotnet test -p:MpexAssemblyDir=/path/to/shims -->
-    <MpexAssemblyDir Condition="'$(MpexAssemblyDir)' == ''">$(MSBuildProjectDirectory)/../../baseline-dlls</MpexAssemblyDir>
+    <MpexAssemblyDir Condition="'$(MpexAssemblyDir)' == ''">$(MSBuildProjectDirectory)/../../server/baseline-dlls</MpexAssemblyDir>
   </PropertyGroup>
 
   <ItemGroup>

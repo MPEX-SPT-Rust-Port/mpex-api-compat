@@ -1,6 +1,6 @@
 # Example PR gate for a consuming (Rust port) repo.
 # Prereqs in the consuming repo:
-#   - a copy of baseline-dlls/ (immutable, safe to vendor)
+#   - a copy of server/baseline-dlls/ (immutable, safe to vendor)
 #   - this script at ci/check-api-compat.sh
 #   - a .config/dotnet-tools.json containing Microsoft.DotNet.ApiCompat.Tool
 # Replace <path-to-built-shims> with wherever your build drops the C#-facing shim assemblies.

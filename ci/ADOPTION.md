@@ -7,7 +7,7 @@ SPTarkov.Server.Web) can break that. This gate makes such breaks fail PRs.
 
 ## Setup in a consuming repo
 
-1. Copy `baseline-dlls/` from mpex-api-compat into your repo. The DLLs are
+1. Copy `server/baseline-dlls/` from mpex-api-compat into your repo. The DLLs are
    frozen at 4.1.2 forever — copies cannot drift.
 2. Copy `ci/check-api-compat.sh`.
 3. Add the ApiCompat tool to your tool manifest:
@@ -44,6 +44,6 @@ so the decision is reviewable.
 ## What this does NOT check
 
 Behavior. A shim can be binary-compatible and still behave differently.
-Behavioral coverage lives in `tests/BehavioralTests/` — point
+Behavioral coverage lives in `tests/SrvBehavioralTests/` — point
 `$(MpexAssemblyDir)` at your shim output directory and run the suite
 (see the repo README).

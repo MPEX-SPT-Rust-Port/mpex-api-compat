@@ -7,20 +7,20 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 echo "== [1/4] Restoring 4.1.2 package closure"
-dotnet publish "$ROOT/tools/BaselineClosure/BaselineClosure.csproj" -c Release \
-    -o "$ROOT/tools/BaselineClosure/publish"
+dotnet publish "$ROOT/tools/SrvBaselineClosure/SrvBaselineClosure.csproj" -c Release \
+    -o "$ROOT/tools/SrvBaselineClosure/publish"
 
-echo "== [2/4] Copying assemblies into baseline-dlls/"
-mkdir -p "$ROOT/baseline-dlls"
-rm -f "$ROOT/baseline-dlls"/*.dll
+echo "== [2/4] Copying assemblies into server/baseline-dlls/"
+mkdir -p "$ROOT/server/baseline-dlls"
+rm -f "$ROOT/server/baseline-dlls"/*.dll
 # Top-level DLLs only: skips SPT_Data content dirs and runtimes/ natives.
-for dll in "$ROOT/tools/BaselineClosure/publish"/*.dll; do
+for dll in "$ROOT/tools/SrvBaselineClosure/publish"/*.dll; do
     base="$(basename "$dll")"
-    [ "$base" = "BaselineClosure.dll" ] && continue
-    cp "$dll" "$ROOT/baseline-dlls/$base"
+    [ "$base" = "SrvBaselineClosure.dll" ] && continue
+    cp "$dll" "$ROOT/server/baseline-dlls/$base"
 done
 # Normalize mode: the publish output is 755 on some machines, 644 on others.
-chmod 644 "$ROOT/baseline-dlls"/*.dll
+chmod 644 "$ROOT/server/baseline-dlls"/*.dll
 
 echo "== [3/4] Generating API surface listings"
 # --configfile: tool restore resolves NuGet.config from the CWD, not from $ROOT.
@@ -31,20 +31,20 @@ dotnet tool restore --tool-manifest "$ROOT/.config/dotnet-tools.json" \
 NETCORE_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.*/ref/net10.0 | sort -V | tail -1)
 ASPNET_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.AspNetCore.App.Ref/10.0.*/ref/net10.0 | sort -V | tail -1)
 
-mkdir -p "$ROOT/api-surface"
-rm -f "$ROOT/api-surface"/*.cs
+mkdir -p "$ROOT/server/api-surface"
+rm -f "$ROOT/server/api-surface"/*.cs
 for a in SPTarkov.Common SPTarkov.DI SPTarkov.Reflection SPTarkov.Server.Assets SPTarkov.Server.Core SPTarkov.Server.Web; do
     echo "   genapi $a"
     dotnet genapi \
-        --assembly "$ROOT/baseline-dlls/$a.dll" \
-        --assembly-reference "$ROOT/baseline-dlls,$NETCORE_REF,$ASPNET_REF" \
-        --output-path "$ROOT/api-surface"
+        --assembly "$ROOT/server/baseline-dlls/$a.dll" \
+        --assembly-reference "$ROOT/server/baseline-dlls,$NETCORE_REF,$ASPNET_REF" \
+        --output-path "$ROOT/server/api-surface"
 done
 
 echo "== [4/4] Dumping semantic inventory + README"
 SPT_SRC="${SPT_SRC:-$HOME/git/TEMP/spt-412-src}"
-dotnet run --project "$ROOT/tools/InventoryDumper" -c Release -- \
-    --output "$ROOT/inventory" \
+dotnet run --project "$ROOT/tools/SrvInventoryDumper" -c Release -- \
+    --output "$ROOT/server/inventory" \
     --routes-source "$SPT_SRC" \
     --readme "$ROOT/README.md"
 

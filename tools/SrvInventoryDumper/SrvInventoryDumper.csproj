@@ -12,7 +12,7 @@
     <PackageReference Include="SPTarkov.Reflection" Version="[4.1.2]" />
     <!-- The Assets package ships SPT_Data content whose .png/.json files are marked
          buildAction=Compile; excluding contentFiles keeps the reflection-only build sane.
-         Same exclusion as tools/BaselineClosure/BaselineClosure.csproj. -->
+         Same exclusion as tools/SrvBaselineClosure/SrvBaselineClosure.csproj. -->
     <PackageReference Include="SPTarkov.Server.Assets" Version="[4.1.2]" ExcludeAssets="contentFiles" />
     <PackageReference Include="SPTarkov.Server.Core" Version="[4.1.2]" />
     <PackageReference Include="SPTarkov.Server.Web" Version="[4.1.2]" />
