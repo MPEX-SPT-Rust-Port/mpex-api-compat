@@ -1,0 +1,87 @@
+[
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Core.Callbacks.GameCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Core.Callbacks.HandbookCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Core.Callbacks.PresetCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Core.Callbacks.RagfairCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Core.Callbacks.SaveCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Core.Callbacks.TraderCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Core.Utils.ImageRouteImporter",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Core.Utils.Watermark",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
+    "Type": "SPTarkov.Server.Web.Services.AuthService",
+    "Assembly": "SPTarkov.Server.Web"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
+    "Type": "SPTarkov.Server.Core.Callbacks.BtrDeliveryCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
+    "Type": "SPTarkov.Server.Core.Callbacks.DialogueCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
+    "Type": "SPTarkov.Server.Core.Callbacks.HideoutCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
+    "Type": "SPTarkov.Server.Core.Callbacks.InsuranceCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
+    "Type": "SPTarkov.Server.Core.Callbacks.RagfairCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
+    "Type": "SPTarkov.Server.Core.Callbacks.SaveCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
+    "Type": "SPTarkov.Server.Core.Callbacks.TraderCallbacks",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
+    "Type": "SPTarkov.Server.Core.Services.InRaid.GoonLocationSpawnService",
+    "Assembly": "SPTarkov.Server.Core"
+  }
+]

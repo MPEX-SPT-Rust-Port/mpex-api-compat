@@ -1,0 +1,1820 @@
+[
+  {
+    "Type": "SPTarkov.Reflection.Patching.PatchManager",
+    "Assembly": "SPTarkov.Reflection",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.AchievementCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.BotCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.BtrDeliveryCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 4000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.BuildsCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.BundleCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.ClientLogCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.CustomizationCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.DataCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.DialogueCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 1000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.GameCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 200000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.HandbookCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 500000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.HealthCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.HideoutCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.InraidCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.InsuranceCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 3000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.InventoryCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.ItemEventCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.LauncherV2Callbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.LocationCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.MatchCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.ModLoaderCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.NoteCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.NotifierCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.PresetCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 800000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.PrestigeCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.ProfileCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.QuestCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.RagfairCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 900000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.RepairCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.SaveCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 600000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.TradeCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.TraderCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 700000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.WeatherCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Callbacks.WishlistCallbacks",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.AchievementController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.BotController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.BuildController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.ClientLogController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.CustomizationController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.DialogueController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.GameController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.HandBookController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.HealthController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.HideoutController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.InRaidController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.InsuranceController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.InventoryController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.LauncherV2Controller",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.LocationController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.MatchController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.ModdedTraderCustomizationController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.NoteController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.NotifierController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.PresetController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.PrestigeController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.ProfileController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.QuestController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.RagfairController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.RepairController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.RepeatableQuestController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.TradeController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.TraderController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.WeatherController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Controllers.WishlistController",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Bot.BotEquipmentModGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Bot.BotGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Bot.BotInventoryGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Bot.BotLevelGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Bot.BotWeaponGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Bot.PlayerScavGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.FenceBaseAssortGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Loot.BotLootGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Loot.LocationLootGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Loot.LootGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Loot.PMCLootGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.PmcWaveGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Ragfair.RagfairAssortGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Ragfair.RagfairOfferGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.RepeatableQuests.CompletionQuestGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.RepeatableQuests.EliminationQuestGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.RepeatableQuests.ExplorationQuestGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.RepeatableQuests.PickupQuestGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.RepeatableQuests.RepeatableQuestRewardGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.ScavCaseRewardGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weapons.Implementations.BarrelInventoryMagGen",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weapons.Implementations.ExternalInventoryMagGen",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weapons.Implementations.InternalMagazineInventoryMagGen",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weapons.Implementations.UbglExternalMagGen",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weapons.InventoryMagGen",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weather.CloudyPreset",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weather.RainyPreset",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weather.SunnyPreset",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Generators.Weather.WeatherGenerator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Bot.BotDifficultyHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Bot.BotGeneratorHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Bot.BotHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Bot.BotWeaponGeneratorHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Bot.DurabilityLimitsHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Commerce.PaymentHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Commerce.RewardHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Commerce.TradeHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.Commando.SptCommandoCommands",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.Commando.SptCommands.GiveCommand.GiveSptCommand",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.Commando.SptCommands.GiveCommand.SavedCommand",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.Commando.SptCommands.ProfileCommand.ProfileSptCommand",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.Commando.SptCommands.TraderCommand.TraderSptCommand",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.CommandoDialogChatBot",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.AreYouABotMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.DisplayLocationsHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.DisplaySkillNamesHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.FishMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.ForceChristmasMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.ForceHalloweenMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.ForceSnowMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.ForceSummerMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.GarbageMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.GiveMeSpaceMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.HelloMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.LoveYouChatMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.NikitaMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.SendGiftMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SPTFriend.Commands.SptMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Dialogue.SptDialogueChatBot",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.InRaid.CounterTrackerHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.InRaid.InRaidHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.InRaid.WeatherHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Items.ItemHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Items.PresetHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Profile.DialogueHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Profile.HandbookHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Profile.HealthHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Profile.HideoutHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Profile.InventoryHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Profile.PrestigeHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Profile.ProfileHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Profile.ProfileValidatorHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Quest.QuestHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Quest.QuestRewardHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Quest.RepeatableQuestHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Ragfair.RagfairHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Ragfair.RagfairOfferHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Ragfair.RagfairSellHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Ragfair.RagfairServerHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Ragfair.RagfairSortHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Ragfair.RepairHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Server.CertificateHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Server.HttpServerHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Server.ModHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Server.NotificationSendHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Server.NotifierHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Traders.AssortHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Traders.TraderAssortHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.Traders.TraderHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Helpers.WeightedRandomHelper",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Loaders.BundleLoader",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations.FixChatBotAids",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations.Fixes.InvalidPmcHeadFix",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations.Fixes.InvalidPmcVoiceFix",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations.Fixes.InvalidPocketFix",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations.Fixes.InvalidRepeatableQuestFix",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations.Fixes.InvalidSkillProgressFix",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations.Fixes.InvalidStackObjectsCountFix",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations.Fixes.InvalidTerraGroupEmployeeQuestFix",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._3._11.HideoutSeed",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._3._11.ThreeTenMinorFixes",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._3._11.ThreeTenToThreeEleven",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._4._0.BuyRestrictionMaxStringToInt",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._4._0.RemoveGInterfaceFromVictims",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._4._0.RemovePassword",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._4._0.RemoveVitaltyFromProfile",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._4._0.TheVoices",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._4._0.ThreeElevenToFourZero",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Migration.Migrations._4._1.AddMissingPrestigesToProfile",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Dynamic.BotDynamicRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Dynamic.BundleDynamicRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Dynamic.CustomizationDynamicRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Dynamic.DataDynamicRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Dynamic.InraidDynamicRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Dynamic.NotifierDynamicRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Dynamic.TraderDynamicRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.EventOutputHolder",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.HttpRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ImageRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.CustomizationItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.HealthItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.HideoutItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.InsuranceItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.InventoryItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.NoteItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.QuestItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.RagfairItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.RepairItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.TradeItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.ItemEvents.WishlistItemEventRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.SaveLoad.HealthSaveLoadRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.SaveLoad.InraidSaveLoadRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.SaveLoad.InsuranceSaveLoadRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.SaveLoad.ProfileSaveLoadRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Serializers.BundleSerializer",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Serializers.NotifySerializer",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.AchievementStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.BotStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.BuildStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.BundleStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.ClientLogStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.CustomizationStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.DataStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.DialogStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.GameStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.InraidStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.InsuranceStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.ItemEventStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.LauncherV2StaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.LocationStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.MatchStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.ModLoaderRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.NotifierStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.PrestigeStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.ProfileStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.QuestStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.RagfairStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.TraderStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Routers.Static.WeatherStaticRouter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 400000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Servers.Http.SptHttpListener",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Servers.HttpServer",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Servers.RagfairServer",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Servers.SaveServer",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Servers.WebSocketServer",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Servers.Ws.Message.DefaultSptWebSocketMessageHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Servers.Ws.SptWebSocketConnectionHandler",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Bot.BotEquipmentFilterService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Bot.BotEquipmentModPoolService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Bot.BotInventoryContainerService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Bot.BotLootCacheService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Bot.BotNameService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Bot.BotWeaponModLimitService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Bot.MatchBotDetailsCacheService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Bot.PmcChatResponseService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Commerce.FenceService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Commerce.GiftService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Commerce.InsuranceService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Commerce.MailSendService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Commerce.PaymentService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Commerce.RepairService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Commerce.TraderPurchasePersisterService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Hideout.CircleOfCultistService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Hideout.MapMarkerService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Hosted.SPTStartupHostedService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "HostedService",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Hosted.SystemInformationLogger",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Image.ImageRouterService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.AirdropService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.BtrDeliveryService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.CustomLocationWaveService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.GoonLocationSpawnService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.LocationLifecycleService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.MatchLocationService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.OpenZoneService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.RaidTimeAdjustmentService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.InRaid.RaidWeatherService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Items.ItemBaseClassService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Items.ItemFilterService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Locales.LocaleService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Locales.ServerLocalisationService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Modding.Custom.CustomItemService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Modding.Custom.CustomQuestService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Modding.InMemoryCacheService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Modding.ModItemCacheService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Modding.ProfileDataService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Profile.BackupService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Profile.CreateProfileService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Profile.ProfileActivityService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Profile.ProfileFixerService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Profile.ProfileMigrationService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Ragfair.RagfairCategoriesService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Ragfair.RagfairLinkedItemService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Ragfair.RagfairOfferService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Ragfair.RagfairPriceService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Ragfair.RagfairRequiredItemsService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Ragfair.RagfairTaxService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Server.BundleHashCacheService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Server.NotificationService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Server.PostDbLoadService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Services.Server.SeasonalEventService",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.Cloners.FastCloner",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.FileUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.HashUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.HttpFileUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.HttpResponseUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.ImageRouteImporter",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 100000
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.ImporterUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.Json.SptJsonConverterRegistrator",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.JsonUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.MathUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.RagfairOfferHolder",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.RandomUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.TimeUtil",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.Watermark",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 0
+  },
+  {
+    "Type": "SPTarkov.Server.Core.Utils.WatermarkLocale",
+    "Assembly": "SPTarkov.Server.Core",
+    "InjectionType": "Transient",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Web.Services.Argon2idPasswordHasher",
+    "Assembly": "SPTarkov.Server.Web",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Web.Services.AuthService",
+    "Assembly": "SPTarkov.Server.Web",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Web.Services.ConfigEditorService",
+    "Assembly": "SPTarkov.Server.Web",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  },
+  {
+    "Type": "SPTarkov.Server.Web.Services.WebLocalizationService",
+    "Assembly": "SPTarkov.Server.Web",
+    "InjectionType": "Singleton",
+    "TypePriority": 2147483647
+  }
+]

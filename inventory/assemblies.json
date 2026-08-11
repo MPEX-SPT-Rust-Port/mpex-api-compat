@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "SPTarkov.Common",
+    "Version": "4.1.0.0",
+    "PackageVersion": "4.1.2",
+    "PublicKeyToken": "(none)",
+    "PublicTypes": 31
+  },
+  {
+    "Name": "SPTarkov.DI",
+    "Version": "4.1.0.0",
+    "PackageVersion": "4.1.2",
+    "PublicKeyToken": "(none)",
+    "PublicTypes": 5
+  },
+  {
+    "Name": "SPTarkov.Reflection",
+    "Version": "4.1.0.0",
+    "PackageVersion": "4.1.2",
+    "PublicKeyToken": "(none)",
+    "PublicTypes": 14
+  },
+  {
+    "Name": "SPTarkov.Server.Assets",
+    "Version": "4.1.0.0",
+    "PackageVersion": "4.1.2",
+    "PublicKeyToken": "(none)",
+    "PublicTypes": 0
+  },
+  {
+    "Name": "SPTarkov.Server.Core",
+    "Version": "4.1.0.0",
+    "PackageVersion": "4.1.2",
+    "PublicKeyToken": "(none)",
+    "PublicTypes": 1595
+  },
+  {
+    "Name": "SPTarkov.Server.Web",
+    "Version": "4.1.0.0",
+    "PackageVersion": "4.1.2",
+    "PublicKeyToken": "(none)",
+    "PublicTypes": 73
+  }
+]
