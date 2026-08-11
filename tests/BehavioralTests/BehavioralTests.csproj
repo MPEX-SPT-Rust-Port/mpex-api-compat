@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <!-- MPEX: directory of assemblies under test. Default = frozen 4.1.2 baseline.
+         Point at a shim build output to verify a Rust port:
+         dotnet test -p:MpexAssemblyDir=/path/to/shims -->
+    <MpexAssemblyDir Condition="'$(MpexAssemblyDir)' == ''">$(MSBuildProjectDirectory)/../../baseline-dlls</MpexAssemblyDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <Reference Include="SPTarkov.Common"><HintPath>$(MpexAssemblyDir)/SPTarkov.Common.dll</HintPath></Reference>
+    <Reference Include="SPTarkov.DI"><HintPath>$(MpexAssemblyDir)/SPTarkov.DI.dll</HintPath></Reference>
+    <Reference Include="SPTarkov.Reflection"><HintPath>$(MpexAssemblyDir)/SPTarkov.Reflection.dll</HintPath></Reference>
+    <Reference Include="SPTarkov.Server.Assets"><HintPath>$(MpexAssemblyDir)/SPTarkov.Server.Assets.dll</HintPath></Reference>
+    <Reference Include="SPTarkov.Server.Core"><HintPath>$(MpexAssemblyDir)/SPTarkov.Server.Core.dll</HintPath></Reference>
+    <Reference Include="SPTarkov.Server.Web"><HintPath>$(MpexAssemblyDir)/SPTarkov.Server.Web.dll</HintPath></Reference>
+  </ItemGroup>
+
+  <!-- Copy the whole closure so the assemblies under test resolve their dependencies at runtime. -->
+  <ItemGroup>
+    <None Include="$(MpexAssemblyDir)/*.dll" CopyToOutputDirectory="PreserveNewest" Link="%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
