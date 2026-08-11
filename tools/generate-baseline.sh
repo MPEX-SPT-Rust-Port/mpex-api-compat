@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
-# Regenerates the entire MPEX baseline from the published 4.1.2 NuGet packages.
-# Rerunning must produce a zero git diff.
+# Regenerates the entire MPEX baseline: server side from the published 4.1.2
+# NuGet packages, client side from the frozen DLLs committed in
+# client/baseline-dlls/ (seeded once, never re-copied — client builds are not
+# byte-reproducible). Rerunning must produce a zero git diff.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 # Local tools (dotnet genapi) are discovered from the CWD, not from $ROOT.
 cd "$ROOT"
 
-echo "== [1/4] Restoring 4.1.2 package closure"
+echo "== [1/6] Restoring 4.1.2 server package closure"
 dotnet publish "$ROOT/tools/SrvBaselineClosure/SrvBaselineClosure.csproj" -c Release \
     -o "$ROOT/tools/SrvBaselineClosure/publish"
 
-echo "== [2/4] Copying assemblies into server/baseline-dlls/"
+echo "== [2/6] Copying assemblies into server/baseline-dlls/"
 mkdir -p "$ROOT/server/baseline-dlls"
 rm -f "$ROOT/server/baseline-dlls"/*.dll
 # Top-level DLLs only: skips SPT_Data content dirs and runtimes/ natives.
@@ -22,7 +24,7 @@ done
 # Normalize mode: the publish output is 755 on some machines, 644 on others.
 chmod 644 "$ROOT/server/baseline-dlls"/*.dll
 
-echo "== [3/4] Generating API surface listings"
+echo "== [3/6] Generating server API surface listings"
 # --configfile: tool restore resolves NuGet.config from the CWD, not from $ROOT.
 dotnet tool restore --tool-manifest "$ROOT/.config/dotnet-tools.json" \
     --configfile "$ROOT/NuGet.config" >/dev/null
@@ -41,11 +43,32 @@ for a in SPTarkov.Common SPTarkov.DI SPTarkov.Reflection SPTarkov.Server.Assets 
         --output-path "$ROOT/server/api-surface"
 done
 
-echo "== [4/4] Dumping semantic inventory + README"
+echo "== [4/6] Client inventory (includes the 4.1.2.0 freeze check)"
+# Game-derived references cannot live in git; sourcing them is documented in
+# client/refs/README.md. The dumper hard-fails when the closure is incomplete.
+CLIENT_REFS="${CLIENT_REFS:-$ROOT/client/refs}"
+dotnet run --project "$ROOT/tools/ClientInventoryDumper" -c Release -- \
+    --baseline "$ROOT/client/baseline-dlls" \
+    --refs "$CLIENT_REFS" \
+    --output "$ROOT/client/inventory"
+
+echo "== [5/6] Generating client API surface listings"
+mkdir -p "$ROOT/client/api-surface"
+rm -f "$ROOT/client/api-surface"/*.cs
+for a in spt-common spt-core spt-custom spt-debugging spt-prepatch spt-reflection spt-singleplayer; do
+    echo "   genapi $a"
+    dotnet genapi \
+        --assembly "$ROOT/client/baseline-dlls/$a.dll" \
+        --assembly-reference "$ROOT/client/baseline-dlls,$CLIENT_REFS" \
+        --output-path "$ROOT/client/api-surface"
+done
+
+echo "== [6/6] Server inventory + README index (both sides)"
 SPT_SRC="${SPT_SRC:-$HOME/git/TEMP/spt-412-src}"
 dotnet run --project "$ROOT/tools/SrvInventoryDumper" -c Release -- \
     --output "$ROOT/server/inventory" \
     --routes-source "$SPT_SRC" \
-    --readme "$ROOT/README.md"
+    --readme "$ROOT/README.md" \
+    --client-inventory "$ROOT/client/inventory"
 
 echo "OK: baseline regenerated"

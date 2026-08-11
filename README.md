@@ -5,11 +5,13 @@
 Frozen SPT **4.1.2** modding API baseline for the MPEX (MultiPlayer eXtraction) C#-to-Rust port.
 Compiled C# mods must keep loading against Rust-backed shim assemblies; this repo holds the contract they load against.
 
-- `server/baseline-dlls/` — frozen 4.1.2 assemblies (immutable; safe to copy into consuming repos)
-- `server/api-surface/` — generated C# listings of every public type/member
-- `server/inventory/` — DI registry, lifecycle implementors, route table, assembly identities
+- `server/baseline-dlls/` — frozen 4.1.2 server assemblies (immutable; safe to copy into consuming repos)
+- `server/api-surface/`, `server/inventory/` — generated server listings, DI registry, lifecycle, route table
+- `client/baseline-dlls/` — frozen 4.1.2 client (BepInEx) assemblies
+- `client/api-surface/`, `client/inventory/` — generated client listings, plugin GUIDs, ModulePatch classes
+- `client/refs/` — git-ignored game-derived reference closure (see `client/refs/README.md`)
 - `ci/` — ApiCompat PR check for consuming repos (see `ci/ADOPTION.md`)
-- `tests/SrvBehavioralTests/` — characterization tests runnable against baseline or shim assemblies
+- `tests/SrvBehavioralTests/`, `tests/ClientBehavioralTests/` — characterization tests runnable against baseline or shim assemblies
 
 | Assembly | Version | Public types | [Injectable] types | API listing |
 |---|---|---|---|---|
@@ -21,6 +23,20 @@ Compiled C# mods must keep loading against Rust-backed shim assemblies; this rep
 | SPTarkov.Server.Web | 4.1.2 | 73 | 4 | [server/api-surface/SPTarkov.Server.Web.cs](server/api-surface/SPTarkov.Server.Web.cs) |
 
 Routes documented: 165 (see [server/inventory/routes.md](server/inventory/routes.md)).
+
+## Client-side baseline
+
+| Assembly | Version | Public types | Plugin GUID | API listing |
+|---|---|---|---|---|
+| spt-common | 4.1.2.0 | 15 | — | [client/api-surface/spt-common.cs](client/api-surface/spt-common.cs) |
+| spt-core | 4.1.2.0 | 8 | com.SPT.core | [client/api-surface/spt-core.cs](client/api-surface/spt-core.cs) |
+| spt-custom | 4.1.2.0 | 72 | com.SPT.custom | [client/api-surface/spt-custom.cs](client/api-surface/spt-custom.cs) |
+| spt-debugging | 4.1.2.0 | 19 | com.SPT.debugging | [client/api-surface/spt-debugging.cs](client/api-surface/spt-debugging.cs) |
+| spt-prepatch | 4.1.2.0 | 4 | — | [client/api-surface/spt-prepatch.cs](client/api-surface/spt-prepatch.cs) |
+| spt-reflection | 4.1.2.0 | 17 | — | [client/api-surface/spt-reflection.cs](client/api-surface/spt-reflection.cs) |
+| spt-singleplayer | 4.1.2.0 | 46 | com.SPT.singleplayer | [client/api-surface/spt-singleplayer.cs](client/api-surface/spt-singleplayer.cs) |
+
+Plugins: 4 (see [client/inventory/plugins.md](client/inventory/plugins.md)). Patch classes: see [client/inventory/patches.md](client/inventory/patches.md).
 
 ## Regenerating
 
@@ -36,11 +52,16 @@ SPT_SRC=~/git/TEMP/spt-412-src tools/generate-baseline.sh
 `SPT_SRC` defaults to `$HOME/git/TEMP/spt-412-src`, so the override is only needed when the worktree lives elsewhere.
 Rerunning the script must produce a zero git diff.
 
+The client stages additionally need the git-ignored `client/refs/` populated from a live game install
+(see `client/refs/README.md`); override the location with `CLIENT_REFS=/path/to/refs`.
+
 ## Running the behavioral suite
 
 ```sh
 dotnet test tests/SrvBehavioralTests                                    # against the frozen baseline
 dotnet test tests/SrvBehavioralTests -p:MpexAssemblyDir=/path/to/shims  # against a Rust-backed shim build
+dotnet test tests/ClientBehavioralTests                                  # client slices, frozen baseline
+dotnet test tests/ClientBehavioralTests -p:MpexAssemblyDir=/path/to/shims  # client slices, shim build
 ```
 
 Warning: wipe `tests/SrvBehavioralTests/{bin,obj}` when switching `MpexAssemblyDir` between directories.

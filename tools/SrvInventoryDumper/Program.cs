@@ -11,7 +11,7 @@ for (var i = 0; i + 1 < args.Length; i += 2)
 
 if (!opts.TryGetValue("--output", out var outputDir))
 {
-    Console.Error.WriteLine("Usage: SrvInventoryDumper --output <dir> [--routes-source <sptCloneRoot>] [--readme <path>]");
+    Console.Error.WriteLine("Usage: SrvInventoryDumper --output <dir> [--routes-source <sptCloneRoot>] [--readme <path>] [--client-inventory <dir>]");
     return 1;
 }
 
@@ -233,6 +233,17 @@ if (opts.TryGetValue("--routes-source", out var sptRoot))
 // --- README index ---
 if (opts.TryGetValue("--readme", out var readmePath))
 {
+    if (!opts.TryGetValue("--client-inventory", out var clientInvDir))
+    {
+        Console.Error.WriteLine("FATAL: --readme requires --client-inventory <dir> — the index covers both sides.");
+        return 1;
+    }
+
+    var clientAssemblies = JsonSerializer.Deserialize<List<ClientAssemblyEntry>>(
+        File.ReadAllText(Path.Combine(clientInvDir, "assemblies.json")))!;
+    var clientPlugins = JsonSerializer.Deserialize<List<ClientPluginEntry>>(
+        File.ReadAllText(Path.Combine(clientInvDir, "plugins.json")))!;
+
     var sb = new StringBuilder();
     sb.AppendLine("# mpex-api-compat");
     sb.AppendLine();
@@ -241,11 +252,13 @@ if (opts.TryGetValue("--readme", out var readmePath))
     sb.AppendLine("Frozen SPT **4.1.2** modding API baseline for the MPEX (MultiPlayer eXtraction) C#-to-Rust port.");
     sb.AppendLine("Compiled C# mods must keep loading against Rust-backed shim assemblies; this repo holds the contract they load against.");
     sb.AppendLine();
-    sb.AppendLine("- `server/baseline-dlls/` — frozen 4.1.2 assemblies (immutable; safe to copy into consuming repos)");
-    sb.AppendLine("- `server/api-surface/` — generated C# listings of every public type/member");
-    sb.AppendLine("- `server/inventory/` — DI registry, lifecycle implementors, route table, assembly identities");
+    sb.AppendLine("- `server/baseline-dlls/` — frozen 4.1.2 server assemblies (immutable; safe to copy into consuming repos)");
+    sb.AppendLine("- `server/api-surface/`, `server/inventory/` — generated server listings, DI registry, lifecycle, route table");
+    sb.AppendLine("- `client/baseline-dlls/` — frozen 4.1.2 client (BepInEx) assemblies");
+    sb.AppendLine("- `client/api-surface/`, `client/inventory/` — generated client listings, plugin GUIDs, ModulePatch classes");
+    sb.AppendLine("- `client/refs/` — git-ignored game-derived reference closure (see `client/refs/README.md`)");
     sb.AppendLine("- `ci/` — ApiCompat PR check for consuming repos (see `ci/ADOPTION.md`)");
-    sb.AppendLine("- `tests/SrvBehavioralTests/` — characterization tests runnable against baseline or shim assemblies");
+    sb.AppendLine("- `tests/SrvBehavioralTests/`, `tests/ClientBehavioralTests/` — characterization tests runnable against baseline or shim assemblies");
     sb.AppendLine();
     sb.AppendLine("| Assembly | Version | Public types | [Injectable] types | API listing |");
     sb.AppendLine("|---|---|---|---|---|");
@@ -257,6 +270,20 @@ if (opts.TryGetValue("--readme", out var readmePath))
 
     sb.AppendLine();
     sb.AppendLine($"Routes documented: {routes.Count} (see [server/inventory/routes.md](server/inventory/routes.md)).");
+    sb.AppendLine();
+    sb.AppendLine("## Client-side baseline");
+    sb.AppendLine();
+    sb.AppendLine("| Assembly | Version | Public types | Plugin GUID | API listing |");
+    sb.AppendLine("|---|---|---|---|---|");
+    foreach (var e in clientAssemblies)
+    {
+        var guid = clientPlugins.FirstOrDefault(p => p.Assembly == e.Name)?.Guid ?? "—";
+        sb.AppendLine($"| {e.Name} | {e.Version} | {e.PublicTypes} | {guid} | [client/api-surface/{e.Name}.cs](client/api-surface/{e.Name}.cs) |");
+    }
+
+    sb.AppendLine();
+    sb.AppendLine($"Plugins: {clientPlugins.Count} (see [client/inventory/plugins.md](client/inventory/plugins.md)). " +
+                  "Patch classes: see [client/inventory/patches.md](client/inventory/patches.md).");
     sb.AppendLine();
     sb.AppendLine("## Regenerating");
     sb.AppendLine();
@@ -272,11 +299,16 @@ if (opts.TryGetValue("--readme", out var readmePath))
     sb.AppendLine("`SPT_SRC` defaults to `$HOME/git/TEMP/spt-412-src`, so the override is only needed when the worktree lives elsewhere.");
     sb.AppendLine("Rerunning the script must produce a zero git diff.");
     sb.AppendLine();
+    sb.AppendLine("The client stages additionally need the git-ignored `client/refs/` populated from a live game install");
+    sb.AppendLine("(see `client/refs/README.md`); override the location with `CLIENT_REFS=/path/to/refs`.");
+    sb.AppendLine();
     sb.AppendLine("## Running the behavioral suite");
     sb.AppendLine();
     sb.AppendLine("```sh");
     sb.AppendLine("dotnet test tests/SrvBehavioralTests                                    # against the frozen baseline");
     sb.AppendLine("dotnet test tests/SrvBehavioralTests -p:MpexAssemblyDir=/path/to/shims  # against a Rust-backed shim build");
+    sb.AppendLine("dotnet test tests/ClientBehavioralTests                                  # client slices, frozen baseline");
+    sb.AppendLine("dotnet test tests/ClientBehavioralTests -p:MpexAssemblyDir=/path/to/shims  # client slices, shim build");
     sb.AppendLine("```");
     sb.AppendLine();
     sb.AppendLine("Warning: wipe `tests/SrvBehavioralTests/{bin,obj}` when switching `MpexAssemblyDir` between directories.");
@@ -321,3 +353,7 @@ record InjectableEntry(string Type, string Assembly, string InjectionType, int T
 record LifecycleEntry(string Interface, string Type, string Assembly);
 
 record RouteEntry(string Url, string Router, string Kind, string File);
+
+record ClientAssemblyEntry(string Name, string Version, int PublicTypes, string[] References);
+
+record ClientPluginEntry(string Assembly, string Type, string Guid, string Name, string Version, string[] Dependencies);
