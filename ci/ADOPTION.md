@@ -40,7 +40,9 @@ assemblies that cannot be vendored. Provide them as a third argument:
 Populate <refs-dir> from a live SPT 4.1.2 install exactly as described in
 mpex-api-compat's `client/refs/README.md`. The script selects the client
 assembly list automatically (it looks for spt-common.dll in the baseline dir)
-and refuses to run the client contract without refs — with no refs argument at
+and refuses to run the client contract unless the refs argument is given and
+names an existing, non-empty directory (a typo'd path fails loudly rather than
+resolving nothing) — with no refs argument at
 all ApiCompat resolves nothing, says nothing about it, and silently skips
 whatever it could not resolve, so a clean pass with zero diagnostics carries no
 guarantee about actual compatibility.

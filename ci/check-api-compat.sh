@@ -13,10 +13,12 @@ REFS_DIR="${3:-}"
 
 if [ -f "$BASELINE_DIR/spt-common.dll" ]; then
     ASSEMBLIES=(spt-common spt-core spt-custom spt-debugging spt-prepatch spt-reflection spt-singleplayer)
-    if [ -z "$REFS_DIR" ]; then
+    if [ -z "$REFS_DIR" ] || [ ! -d "$REFS_DIR" ] || [ -z "$(ls -A "$REFS_DIR")" ]; then
         # ApiCompat reports zero diagnostics when references don't resolve, which
-        # looks exactly like success. Refuse to produce a meaningless pass.
-        echo "FATAL: the client contract requires a refs-dir (game-derived references)."
+        # looks exactly like success. Refuse to produce a meaningless pass — a
+        # missing or typo'd refs path must fail as loudly as no refs path at all.
+        echo "FATAL: the client contract requires a populated refs-dir (game-derived references)."
+        echo "       got: '${REFS_DIR:-<none>}' — must be an existing, non-empty directory."
         echo "usage: check-api-compat.sh <candidate-dir> <baseline-dir> <refs-dir>"
         exit 1
     fi
