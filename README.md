@@ -64,5 +64,5 @@ dotnet test tests/ClientBehavioralTests                                  # clien
 dotnet test tests/ClientBehavioralTests -p:MpexAssemblyDir=/path/to/shims  # client slices, shim build
 ```
 
-Warning: wipe `tests/SrvBehavioralTests/{bin,obj}` when switching `MpexAssemblyDir` between directories.
+Warning: wipe `tests/SrvBehavioralTests/{bin,obj}` and `tests/ClientBehavioralTests/{bin,obj}` when switching `MpexAssemblyDir` between directories.
 The csproj copies the assembly closure with `PreserveNewest`, and the frozen baseline DLLs have old mtimes, so stale DLLs from the previous run can survive the switch.

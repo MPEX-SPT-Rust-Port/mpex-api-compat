@@ -311,7 +311,7 @@ if (opts.TryGetValue("--readme", out var readmePath))
     sb.AppendLine("dotnet test tests/ClientBehavioralTests -p:MpexAssemblyDir=/path/to/shims  # client slices, shim build");
     sb.AppendLine("```");
     sb.AppendLine();
-    sb.AppendLine("Warning: wipe `tests/SrvBehavioralTests/{bin,obj}` when switching `MpexAssemblyDir` between directories.");
+    sb.AppendLine("Warning: wipe `tests/SrvBehavioralTests/{bin,obj}` and `tests/ClientBehavioralTests/{bin,obj}` when switching `MpexAssemblyDir` between directories.");
     sb.AppendLine("The csproj copies the assembly closure with `PreserveNewest`, and the frozen baseline DLLs have old mtimes, so stale DLLs from the previous run can survive the switch.");
     File.WriteAllText(readmePath, sb.ToString());
 }
