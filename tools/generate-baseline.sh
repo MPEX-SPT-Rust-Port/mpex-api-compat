@@ -3,6 +3,8 @@
 # Rerunning must produce a zero git diff.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+# Local tools (dotnet genapi) are discovered from the CWD, not from $ROOT.
+cd "$ROOT"
 
 echo "== [1/3] Restoring 4.1.2 package closure"
 dotnet publish "$ROOT/tools/BaselineClosure/BaselineClosure.csproj" -c Release \
@@ -19,7 +21,9 @@ for dll in "$ROOT/tools/BaselineClosure/publish"/*.dll; do
 done
 
 echo "== [3/3] Generating API surface listings"
-dotnet tool restore --tool-manifest "$ROOT/.config/dotnet-tools.json" >/dev/null
+# --configfile: tool restore resolves NuGet.config from the CWD, not from $ROOT.
+dotnet tool restore --tool-manifest "$ROOT/.config/dotnet-tools.json" \
+    --configfile "$ROOT/NuGet.config" >/dev/null
 
 # GenAPI needs reference assemblies to resolve framework types.
 NETCORE_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.*/ref/net10.0 | sort | tail -1)
