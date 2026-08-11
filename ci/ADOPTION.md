@@ -17,6 +17,22 @@ SPTarkov.Server.Web) can break that. This gate makes such breaks fail PRs.
    C#-facing shim assemblies, then run
    `./ci/check-api-compat.sh <your-shim-output-dir> ./baseline-dlls`.
 
+Point the gate at a directory containing the shims **plus their dependency
+closure** (or pass `--right-assembly-references <dir>`). ApiCompat does not warn
+when it cannot resolve a candidate's references — an assembly compared in an
+otherwise empty directory yields a clean pass with zero diagnostics, which looks
+exactly like success.
+
+## Rules
+
+`--enable-rule-cannot-change-parameter-name` is on: mods call by named argument,
+so a renamed parameter is a source break even though it is binary-compatible.
+`--enable-rule-attributes-must-match` remains available as an opt-in if attribute
+drift ever needs to fail the build.
+
+`--strict-mode` is deliberately off. A shim may ADD public API; it may not remove
+or change any.
+
 ## Reading failures
 
 Each incompatibility prints as a `CP****` diagnostic naming the exact member

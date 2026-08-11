@@ -15,14 +15,17 @@ public class DependencyInjectionHandlerTests
         string Name { get; }
     }
 
+    // Names deliberately oppose priority: alphabetically Alpha < Zebra, by priority
+    // Zebra(100) < Alpha(200). A type-name sort would produce ["late", "early"], so the
+    // ordering test below actually distinguishes TypePriority from incidental name order.
     [Injectable(InjectionType.Singleton, typePriority: 100)]
-    public class EarlyService : IMarkerService
+    public class ZebraService : IMarkerService
     {
         public string Name => "early";
     }
 
     [Injectable(InjectionType.Singleton, typePriority: 200)]
-    public class LateService : IMarkerService
+    public class AlphaService : IMarkerService
     {
         public string Name => "late";
     }
@@ -64,15 +67,15 @@ public class DependencyInjectionHandlerTests
     [Fact]
     public void InjectableTypeIsResolvableByItsInterface()
     {
-        using var provider = Build(typeof(EarlyService));
-        Assert.IsType<EarlyService>(provider.GetRequiredService<IMarkerService>());
+        using var provider = Build(typeof(ZebraService));
+        Assert.IsType<ZebraService>(provider.GetRequiredService<IMarkerService>());
     }
 
     [Fact]
     public void InterfaceAndConcreteResolutionsShareTheSingletonInstance()
     {
-        using var provider = Build(typeof(EarlyService));
-        Assert.Same(provider.GetRequiredService<EarlyService>(), provider.GetRequiredService<IMarkerService>());
+        using var provider = Build(typeof(ZebraService));
+        Assert.Same(provider.GetRequiredService<ZebraService>(), provider.GetRequiredService<IMarkerService>());
     }
 
     [Fact]
@@ -87,7 +90,8 @@ public class DependencyInjectionHandlerTests
     {
         // InjectAll sorts registrations by TypePriority, and MEDI preserves
         // registration order in GetServices — this is the load-order contract.
-        using var provider = Build(typeof(LateService), typeof(EarlyService));
+        // Registration order here is reversed relative to the expected output.
+        using var provider = Build(typeof(AlphaService), typeof(ZebraService));
         var names = provider.GetServices<IMarkerService>().Select(s => s.Name).ToList();
         Assert.Equal(["early", "late"], names);
     }

@@ -101,22 +101,45 @@ File.WriteAllText(
     MdTable(
         "[Injectable] DI registry — mods observe lifetimes and TypePriority load order",
         ["Type", "Assembly", "InjectionType", "TypePriority"],
-        injectables.Select(e => new[] { e.Type, e.Assembly, e.InjectionType, e.TypePriority.ToString() })
+        injectables.Select(e => new[] { e.Type, e.Assembly, e.InjectionType, e.TypePriority.ToString() }),
+        [
+            "Registration is mechanical, so this table implies the registered service types: each",
+            "`[Injectable]` type is registered as itself, plus every interface it implements whose",
+            "namespace does not start with `System`, plus every type in its base-type chain. Types are",
+            "registered sorted ascending by `TypePriority`, which is the load order mods observe via",
+            "`GetServices<T>()`. Under `Singleton` all of a type's registrations resolve to the same",
+            "instance; under `Transient` each resolution constructs a new one.",
+            "The executable pin for this rule is `tests/BehavioralTests/DependencyInjectionHandlerTests.cs`.",
+        ]
     )
 );
 
 // --- Mod lifecycle interface implementors ---
+// Discovered, not hardcoded: every public interface in SPTarkov.Server.Core.DI is a
+// lifecycle contract a mod may implement, siblings included.
 var core = assemblies.Single(a => a.GetName().Name == "SPTarkov.Server.Core");
-string[] lifecycleInterfaceNames =
-[
-    "SPTarkov.Server.Core.DI.IOnLoad",
-    "SPTarkov.Server.Core.DI.IOnUpdate",
-    "SPTarkov.Server.Core.DI.IOnDIConstruct",
-];
-var lifecycle = new List<LifecycleEntry>();
-foreach (var name in lifecycleInterfaceNames)
+var lifecycleInterfaces = core.GetExportedTypes()
+    .Where(t => t.IsInterface && t.Namespace == "SPTarkov.Server.Core.DI")
+    .OrderBy(t => t.FullName, StringComparer.Ordinal)
+    .ToList();
+
+foreach (var required in new[]
+         {
+             "SPTarkov.Server.Core.DI.IOnLoad",
+             "SPTarkov.Server.Core.DI.IOnUpdate",
+             "SPTarkov.Server.Core.DI.IOnDIConstruct",
+         })
 {
-    var iface = core.GetType(name) ?? throw new InvalidOperationException($"{name} not found in Server.Core");
+    if (!lifecycleInterfaces.Any(t => t.FullName == required))
+    {
+        Console.Error.WriteLine($"FATAL: {required} not discovered in SPTarkov.Server.Core.DI — reflection scan is broken.");
+        return 1;
+    }
+}
+
+var lifecycle = new List<LifecycleEntry>();
+foreach (var iface in lifecycleInterfaces)
+{
     foreach (var a in assemblies)
     {
         foreach (var t in a.GetTypes().Where(t => t.IsClass && iface.IsAssignableFrom(t)))
@@ -137,7 +160,15 @@ File.WriteAllText(
     MdTable(
         "Mod lifecycle interface implementors",
         ["Interface", "Type", "Assembly"],
-        lifecycle.Select(e => new[] { e.Interface, e.Type, e.Assembly })
+        lifecycle.Select(e => new[] { e.Interface, e.Type, e.Assembly }),
+        [
+            "Scanned interfaces — every public interface in `SPTarkov.Server.Core.DI`, discovered by",
+            "reflection. Zero-implementor interfaces are listed here because they are still contracts a",
+            "mod may implement; the table below carries implementor rows only.",
+            "",
+            .. lifecycleInterfaces.Select(i =>
+                $"- `{i.FullName}` — {lifecycle.Count(e => e.Interface == i.FullName)} implementors"),
+        ]
     )
 );
 
@@ -227,20 +258,52 @@ if (opts.TryGetValue("--readme", out var readmePath))
     sb.AppendLine();
     sb.AppendLine($"Routes documented: {routes.Count} (see [inventory/routes.md](inventory/routes.md)).");
     sb.AppendLine();
-    sb.AppendLine("Regenerate everything: `tools/generate-baseline.sh` (requires the 4.1.2 source worktree at `~/git/TEMP/spt-412-src`).");
+    sb.AppendLine("## Regenerating");
+    sb.AppendLine();
+    sb.AppendLine("`tools/generate-baseline.sh` rebuilds `README.md`, `inventory/`, `api-surface/` and `baseline-dlls/`.");
+    sb.AppendLine("It needs a source worktree of the 4.1.2 tag to scan the route table:");
+    sb.AppendLine();
+    sb.AppendLine("```sh");
+    sb.AppendLine("git clone https://github.com/sp-tarkov/server-csharp ~/git/TEMP/server-csharp   # or reuse an existing clone");
+    sb.AppendLine("git -C ~/git/TEMP/server-csharp worktree add ~/git/TEMP/spt-412-src 4.1.2");
+    sb.AppendLine("SPT_SRC=~/git/TEMP/spt-412-src tools/generate-baseline.sh");
+    sb.AppendLine("```");
+    sb.AppendLine();
+    sb.AppendLine("`SPT_SRC` defaults to `$HOME/git/TEMP/spt-412-src`, so the override is only needed when the worktree lives elsewhere.");
+    sb.AppendLine("Rerunning the script must produce a zero git diff.");
+    sb.AppendLine();
+    sb.AppendLine("## Running the behavioral suite");
+    sb.AppendLine();
+    sb.AppendLine("```sh");
+    sb.AppendLine("dotnet test tests/BehavioralTests                                    # against the frozen baseline");
+    sb.AppendLine("dotnet test tests/BehavioralTests -p:MpexAssemblyDir=/path/to/shims  # against a Rust-backed shim build");
+    sb.AppendLine("```");
+    sb.AppendLine();
+    sb.AppendLine("Warning: wipe `tests/BehavioralTests/{bin,obj}` when switching `MpexAssemblyDir` between directories.");
+    sb.AppendLine("The csproj copies the assembly closure with `PreserveNewest`, and the frozen baseline DLLs have old mtimes, so stale DLLs from the previous run can survive the switch.");
     File.WriteAllText(readmePath, sb.ToString());
 }
 
 Console.WriteLine($"OK: {assemblyEntries.Count} assemblies, {injectables.Count} injectables, {lifecycle.Count} lifecycle implementors");
 return 0;
 
-static string MdTable(string title, string[] header, IEnumerable<string[]> rows)
+static string MdTable(string title, string[] header, IEnumerable<string[]> rows, IEnumerable<string>? preamble = null)
 {
     var sb = new StringBuilder();
     sb.AppendLine($"# {title}");
     sb.AppendLine();
     sb.AppendLine("<!-- GENERATED by tools/InventoryDumper — do not edit by hand. -->");
     sb.AppendLine();
+    foreach (var line in preamble ?? [])
+    {
+        sb.AppendLine(line);
+    }
+
+    if (preamble is not null)
+    {
+        sb.AppendLine();
+    }
+
     sb.AppendLine("| " + string.Join(" | ", header) + " |");
     sb.AppendLine("|" + string.Concat(Enumerable.Repeat("---|", header.Length)));
     foreach (var row in rows)

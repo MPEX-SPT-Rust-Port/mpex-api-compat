@@ -1,5 +1,40 @@
 [
   {
+    "Interface": "SPTarkov.Server.Core.DI.IOnAfterEventRequestData",
+    "Type": "SPTarkov.Server.Core.DI.ItemRouterOnAfterEventRequestData",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnAfterEventRequestData",
+    "Type": "SPTarkov.Server.Core.DI.OnAfterEventRequestData\u00602",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnAfterEventRequestData",
+    "Type": "SPTarkov.Server.Core.DI.SaveLoadRouterOnAfterEventRequestData",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnAfterEventRequestData",
+    "Type": "SPTarkov.Server.Core.DI.StaticDynamicOnAfterEventRequestData",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnBeforeEventRequestData",
+    "Type": "SPTarkov.Server.Core.DI.ItemRouterOnBeforeEventRequestData",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnBeforeEventRequestData",
+    "Type": "SPTarkov.Server.Core.DI.SaveLoadOnBeforeEventRequestData",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.IOnBeforeEventRequestData",
+    "Type": "SPTarkov.Server.Core.DI.StaticDynamicOnBeforeEventRequestData",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
     "Interface": "SPTarkov.Server.Core.DI.IOnLoad",
     "Type": "SPTarkov.Server.Core.Callbacks.GameCallbacks",
     "Assembly": "SPTarkov.Server.Core"
@@ -82,6 +117,16 @@
   {
     "Interface": "SPTarkov.Server.Core.DI.IOnUpdate",
     "Type": "SPTarkov.Server.Core.Services.InRaid.GoonLocationSpawnService",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.ISerializer",
+    "Type": "SPTarkov.Server.Core.Routers.Serializers.BundleSerializer",
+    "Assembly": "SPTarkov.Server.Core"
+  },
+  {
+    "Interface": "SPTarkov.Server.Core.DI.ISerializer",
+    "Type": "SPTarkov.Server.Core.Routers.Serializers.NotifySerializer",
     "Assembly": "SPTarkov.Server.Core"
   }
 ]

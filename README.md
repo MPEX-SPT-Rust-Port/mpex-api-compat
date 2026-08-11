@@ -22,4 +22,26 @@ Compiled C# mods must keep loading against Rust-backed shim assemblies; this rep
 
 Routes documented: 165 (see [inventory/routes.md](inventory/routes.md)).
 
-Regenerate everything: `tools/generate-baseline.sh` (requires the 4.1.2 source worktree at `~/git/TEMP/spt-412-src`).
+## Regenerating
+
+`tools/generate-baseline.sh` rebuilds `README.md`, `inventory/`, `api-surface/` and `baseline-dlls/`.
+It needs a source worktree of the 4.1.2 tag to scan the route table:
+
+```sh
+git clone https://github.com/sp-tarkov/server-csharp ~/git/TEMP/server-csharp   # or reuse an existing clone
+git -C ~/git/TEMP/server-csharp worktree add ~/git/TEMP/spt-412-src 4.1.2
+SPT_SRC=~/git/TEMP/spt-412-src tools/generate-baseline.sh
+```
+
+`SPT_SRC` defaults to `$HOME/git/TEMP/spt-412-src`, so the override is only needed when the worktree lives elsewhere.
+Rerunning the script must produce a zero git diff.
+
+## Running the behavioral suite
+
+```sh
+dotnet test tests/BehavioralTests                                    # against the frozen baseline
+dotnet test tests/BehavioralTests -p:MpexAssemblyDir=/path/to/shims  # against a Rust-backed shim build
+```
+
+Warning: wipe `tests/BehavioralTests/{bin,obj}` when switching `MpexAssemblyDir` between directories.
+The csproj copies the assembly closure with `PreserveNewest`, and the frozen baseline DLLs have old mtimes, so stale DLLs from the previous run can survive the switch.

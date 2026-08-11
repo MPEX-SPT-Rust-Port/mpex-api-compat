@@ -19,6 +19,8 @@ for dll in "$ROOT/tools/BaselineClosure/publish"/*.dll; do
     [ "$base" = "BaselineClosure.dll" ] && continue
     cp "$dll" "$ROOT/baseline-dlls/$base"
 done
+# Normalize mode: the publish output is 755 on some machines, 644 on others.
+chmod 644 "$ROOT/baseline-dlls"/*.dll
 
 echo "== [3/4] Generating API surface listings"
 # --configfile: tool restore resolves NuGet.config from the CWD, not from $ROOT.
@@ -26,8 +28,8 @@ dotnet tool restore --tool-manifest "$ROOT/.config/dotnet-tools.json" \
     --configfile "$ROOT/NuGet.config" >/dev/null
 
 # GenAPI needs reference assemblies to resolve framework types.
-NETCORE_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.*/ref/net10.0 | sort | tail -1)
-ASPNET_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.AspNetCore.App.Ref/10.0.*/ref/net10.0 | sort | tail -1)
+NETCORE_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.*/ref/net10.0 | sort -V | tail -1)
+ASPNET_REF=$(ls -d /usr/share/dotnet/packs/Microsoft.AspNetCore.App.Ref/10.0.*/ref/net10.0 | sort -V | tail -1)
 
 mkdir -p "$ROOT/api-surface"
 rm -f "$ROOT/api-surface"/*.cs

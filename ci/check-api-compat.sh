@@ -17,7 +17,9 @@ for a in "${ASSEMBLIES[@]}"; do
         continue
     fi
     # left = contract (baseline), right = implementation (candidate).
-    dotnet apicompat --left "$BASELINE_DIR/$a.dll" --right "$CANDIDATE_DIR/$a.dll" || fail=1
+    # cannot-change-parameter-name: source compatibility — mods call by named argument.
+    dotnet apicompat --left "$BASELINE_DIR/$a.dll" --right "$CANDIDATE_DIR/$a.dll" \
+        --enable-rule-cannot-change-parameter-name || fail=1
 done
 
 if [ "$fail" -ne 0 ]; then
