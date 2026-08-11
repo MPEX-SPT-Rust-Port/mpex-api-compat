@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <!-- MPEX: directory of assemblies under test. Default = frozen 4.1.2 client baseline.
+         Point at a shim build output to verify a port:
+         dotnet test -p:MpexAssemblyDir=/path/to/shims -->
+    <MpexAssemblyDir Condition="'$(MpexAssemblyDir)' == ''">$(MSBuildProjectDirectory)/../../client/baseline-dlls</MpexAssemblyDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <!-- Runtime dependencies of the slices under test.
+         BepInEx.Core also brings Mono.Cecil transitively.
+         ExcludeAssets="build": the package's build/BepInEx.Core.targets strips
+         BepInEx.BaseLib, HarmonyX, Mono.Cecil and MonoMod.* from copy-local,
+         because inside the game the BepInEx loader supplies them. A test host
+         has no loader, so those assemblies must land in the output directory. -->
+    <PackageReference Include="BepInEx.Core" Version="5.4.21" ExcludeAssets="build" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <!-- Only the Unity-free slices are referenced; the other five assemblies
+       cannot load outside the game. -->
+  <ItemGroup>
+    <Reference Include="spt-common"><HintPath>$(MpexAssemblyDir)/spt-common.dll</HintPath></Reference>
+    <Reference Include="spt-prepatch"><HintPath>$(MpexAssemblyDir)/spt-prepatch.dll</HintPath></Reference>
+  </ItemGroup>
+
+  <!-- Copy all seven so identity tests can check the full contract. -->
+  <ItemGroup>
+    <None Include="$(MpexAssemblyDir)/*.dll" CopyToOutputDirectory="PreserveNewest" Link="%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
