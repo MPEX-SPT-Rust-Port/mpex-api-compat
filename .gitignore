@@ -3,3 +3,8 @@ obj/
 tools/SrvBaselineClosure/publish/
 client/refs/*
 !client/refs/README.md
+docs/**
+.superpowers
+.claude
+*.dll
+!hollowed.dll
