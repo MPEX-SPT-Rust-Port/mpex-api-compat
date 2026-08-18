@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://learn.microsoft.com/dotnet/fundamentals/package-validation/diagnostic-ids -->
+<!--
+  Intentional breaks against the frozen 4.1.2 server baseline.
+  Left/Right are omitted deliberately so a suppression matches whatever candidate
+  directory check-api-compat.sh is pointed at (worktree builds, CI, local Release).
+-->
+<Suppressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--
+    The BLEEDINGEDGE build types were removed; only LOCAL, DEBUG and RELEASE remain.
+    Mods can no longer be disabled, so ProgramStatics.MODS() and WatermarkLocale.Modding
+    are retained as always-on shims and are NOT suppressed - only the enum members are gone.
+    A mod that named EntryType.BLEEDINGEDGE will fail to load.
+  -->
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>F:SPTarkov.Server.Core.Models.Enums.EntryType.BLEEDINGEDGE</Target>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>F:SPTarkov.Server.Core.Models.Enums.EntryType.BLEEDINGEDGEMODS</Target>
+  </Suppression>
+</Suppressions>

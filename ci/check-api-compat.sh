@@ -34,6 +34,13 @@ if [ -n "$REFS_DIR" ]; then
     )
 fi
 
+# Intentional breaks live next to the baseline they are scoped to, so the server and
+# client contracts cannot suppress each other's diagnostics. One file per assembly:
+# apicompat reports every suppression it did not use, so a file shared across the loop
+# would cry "unnecessary suppression" on all the other assemblies and bury a genuinely
+# stale entry. An assembly with no accepted breaks simply has no file.
+SUPPRESSION_DIR="$(dirname "$BASELINE_DIR")/api-compat-suppressions"
+
 fail=0
 for a in "${ASSEMBLIES[@]}"; do
     echo "== apicompat: $a"
@@ -42,10 +49,16 @@ for a in "${ASSEMBLIES[@]}"; do
         fail=1
         continue
     fi
+    SUPPRESSION_ARGS=()
+    if [ -f "$SUPPRESSION_DIR/$a.xml" ]; then
+        echo "   using suppressions: $SUPPRESSION_DIR/$a.xml"
+        SUPPRESSION_ARGS=(--suppression-file "$SUPPRESSION_DIR/$a.xml")
+    fi
+
     # left = contract (baseline), right = implementation (candidate).
     # cannot-change-parameter-name: source compatibility — mods call by named argument.
     dotnet apicompat --left "$BASELINE_DIR/$a.dll" --right "$CANDIDATE_DIR/$a.dll" \
-        "${REF_ARGS[@]}" \
+        "${REF_ARGS[@]}" "${SUPPRESSION_ARGS[@]}" \
         --enable-rule-cannot-change-parameter-name || fail=1
 done
 
